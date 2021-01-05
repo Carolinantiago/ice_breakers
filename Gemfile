@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootstrap-sass'
 gem 'devise'
 
+gem 'activeadmin'
+
 gem 'jquery-rails'
 
 gem 'byebug'
