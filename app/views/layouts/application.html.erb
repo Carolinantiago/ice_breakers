@@ -9,15 +9,33 @@
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
-        <header class="navbar navbar-default" role="navigation">
+  <header class="navbar navbar-default" role="navigation">
     <div class="navbar-inner">
       <div class="container">
         <div id="logo" class="navbar-brand"><%= link_to "Refresh Ice Breakers", root_path %></div>
+        <nav class="collapse navbar-collapse navbar-ex1-collapse">	
+          <ul class="nav navbar-nav navbar-right">	
+            <li><a href="https://www.wellbeing-warrior.com/trial_requests/new">Wellbeing Warrior Free Trial</a></li>
+          </ul>
+        </nav>
       </div>
     </div>
   </header>
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <%= yield %>
 </body>
+
+<footer>
+  <footer class="footer">
+    <div class="navbar-inner">
+      <div class="container">
+        <nav class="collapse navbar-collapse navbar-ex1-collapse">	
+          <ul class="nav navbar-nav navbar-right">
+            <small>
+              Icebreakers Powered by Wellbeing Warrior
+              <a href="https://www.wellbeing-warrior.com/welcome">Wellbeing Warrior</a>
+  </footer>
+</footer>
 </html>
