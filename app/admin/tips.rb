@@ -1,6 +1,15 @@
-ActiveAdmin.register Tip do
+ActiveAdmin.register Tip do 
+  controller do
+    def create
+      @tip = Tip.new(permited_params)
+      @tip.admin_user = current_admin_user
+      super
+    end 
 
-  permit_params :tip_description, :user_id
+    def permited_params
+      params.require(:tip).permit(:tip_description)
+    end
+  end 
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
