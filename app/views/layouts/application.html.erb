@@ -4,46 +4,37 @@
   <title>RandomIceBreakers</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 <body>
-  <header class="navbar navbar-default" role="navigation">
+  <header>
     <div class="navbar-inner">
       <div class="container">
-        <div id="logo" class="navbar-brand"><%="Ice Breakers"%></div>
+        <div id="header_text" class="navbar-brand"><%="Ice Breakers"%></div>
+        <%=image_tag("icon_ice_breaker.png")%>
         <nav class="collapse navbar-collapse navbar-ex1-collapse">	
-          <ul class="nav navbar-nav navbar-right">	
-            <li><a href="https://www.wellbeing-warrior.com/trial_requests/new">Wellbeing Warrior Free Trial</a></li>
+          <ul class="nav navbar-nav navbar-right">
+            <div id="footer_text" class="navbar-brand"><a href="https://www.linkedin.com/company/27185123/admin/">Share</a></div>
+            <div id="footer_text" class="navbar-brand"><a href="https://www.wellbeing-warrior.com/welcome">+ Info</a></div>
           </ul>
         </nav>
       </div>
     </div>
   </header>
-
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <%= yield %>
-  <footer class="footer">
-    <div class="navbar navbar-default" role="navigation">
-      <div class="navbar-inner">
-        <div class="container">
-          <nav class="collapse navbar-collapse navbar-ex1-collapse">	
-            <ul class="nav navbar-nav navbar-right">
-              <small>
-                Icebreakers Powered by
-                <a href="https://www.wellbeing-warrior.com/welcome">Wellbeing Warrior</a>
-              <small>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </footer>
 </body>
 
-
-
+<footer>
+  <div class="navbar-inner">
+    <div class="container">
+      <div id="footer_text" class="navbar-brand"><a href="https://www.wellbeing-warrior.com/trial_requests/new">Get your free trial</a></div>	
+      <div id="footer_text" class="navbar-right">Icebreakers Powered by <%=image_tag("logo_ww-lettering.svg")%></div>
+      </nav>
+    </div>
+  </div>
+</footer>
 
 </html>

@@ -29,11 +29,29 @@
 	}
 }
 
+#header_text {
+	color: white;
+}
+
+
+#footer_text {
+	color: white;
+}
+
+header {
+	background-color: black;
+}
+
 footer {
+	background-color: black;
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	width: 100%;
+ }
+
+ #navbar-brand {
+	color: white;
  }
 
 #generate {
@@ -42,3 +60,5 @@ footer {
 		color: gray;
 	}
 }
+
+
