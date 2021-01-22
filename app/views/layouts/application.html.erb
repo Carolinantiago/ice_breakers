@@ -7,18 +7,21 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
+
 <body>
   <header>
     <div class="navbar-inner">
       <div class="container">
         <div id="header_text" class="navbar-brand"><%="Ice Breakers"%></div>
-        <%=image_tag("icon_ice_breaker.png")%>
-        <nav class="collapse navbar-collapse navbar-ex1-collapse">	
+        <%=image_tag("icon_ice_breaker.png")%>	
           <ul class="nav navbar-nav navbar-right">
-            <div id="footer_text" class="navbar-brand"><a href="https://www.linkedin.com/company/27185123/admin/">Share</a></div>
+            <div id="footer_text" class="navbar-brand">
+              <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+              <script type="IN/Share" data-url="https://protected-springs-84908.herokuapp.com/"></script>
+              <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fprotected-springs-84908.herokuapp.com%2F&layout=button&size=small&width=67&height=20&appId" width="67" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
             <div id="footer_text" class="navbar-brand"><a href="https://www.wellbeing-warrior.com/welcome">+ Info</a></div>
           </ul>
-        </nav>
       </div>
     </div>
   </header>
@@ -31,8 +34,8 @@
   <div class="navbar-inner">
     <div class="container">
       <div id="footer_text" class="navbar-brand"><a href="https://www.wellbeing-warrior.com/trial_requests/new">Get your free trial</a></div>	
-      <div id="footer_text" class="navbar-right">Icebreakers Powered by <%=image_tag("logo_ww-lettering.svg")%></div>
-      </nav>
+      <ul class="nav navbar-nav navbar-right">
+        <div id="header_text" class="navbar-brand"><%="@ 2021 Ice Breakers powered by "%><%=image_tag("logo_ww-lettering.svg", style: 'display:inline')%></div>
     </div>
   </div>
 </footer>
