@@ -9,11 +9,22 @@
 </head>
 
 <body>
+
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown and Share
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <li><a class="dropdown-item" href="#">Facebook</a></li>
+      <li><a class="dropdown-item" href="#">Linkedin</a></li>
+    </ul>
+  </div>
+
   <header>
     <div class="navbar-inner">
       <div class="container">
         <div id="header_text" class="navbar-brand"><%="Ice Breakers"%></div>
-        <%=image_tag("icon_ice_breaker.png")%>	
+        <%=image_tag("icon_ice_breaker.png")%>
           <ul class="nav navbar-nav navbar-right">
             <div id="footer_text" class="navbar-brand">
               <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
@@ -28,16 +39,18 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <%= yield %>
-</body>
 
-<footer>
-  <div class="navbar-inner">
-    <div class="container">
-      <div id="footer_text" class="navbar-brand"><a href="https://www.wellbeing-warrior.com/trial_requests/new">Get your free trial</a></div>	
-      <ul class="nav navbar-nav navbar-right">
-        <div id="header_text" class="navbar-brand"><%="@ 2021 Ice Breakers powered by "%><%=image_tag("logo_ww-lettering.svg", style: 'display:inline')%></div>
+  <footer>
+    <div class="navbar-inner">
+      <div class="container">
+        <div id="footer_text" class="navbar-brand"><a href="https://www.wellbeing-warrior.com/trial_requests/new">Get your free trial</a></div>	
+        <ul class="nav navbar-nav navbar-right">
+          <div id="footer_text" class="navbar-brand"><%="@ 2021 Ice Breakers powered by "%><%=image_tag("logo_ww-lettering.svg", style: 'display:inline')%></div>
+      </div>
     </div>
-  </div>
-</footer>
-
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </html>
+
+
