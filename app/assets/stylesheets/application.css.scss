@@ -26,12 +26,19 @@
 	}
 }
 
+#ice_big {
+	font-size: 35px;
+}
+
+.nav-link.dropdown-toggle {
+	color: white !important
+   }
+
 #header_text {
 	font-size: 15px;
 	padding: 15px 0;
 	color: white;
 }
-
 
 #footer_text {
 	font-size: 12px;
@@ -61,4 +68,8 @@ footer {
 	text-decoration: none;
   }
 
+  .navbar-nav > li{
+	padding-left:60px;
+	padding-right:60px;
+  }
 
