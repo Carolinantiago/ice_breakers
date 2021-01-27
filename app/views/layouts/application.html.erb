@@ -7,47 +7,48 @@
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
-
 <body>
-
-  <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-      Dropdown and Share
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <li><a class="dropdown-item" href="#">Facebook</a></li>
-      <li><a class="dropdown-item" href="#">Linkedin</a></li>
-    </ul>
-  </div>
-
   <header>
-    <div class="navbar-inner">
-      <div class="container">
-        <div id="header_text" class="navbar-brand"><%="Ice Breakers"%></div>
-        <%=image_tag("icon_ice_breaker.png")%>
-          <ul class="nav navbar-nav navbar-right">
-            <div id="footer_text" class="navbar-brand">
-              <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
-              <script type="IN/Share" data-url="https://protected-springs-84908.herokuapp.com/"></script>
-              <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fprotected-springs-84908.herokuapp.com%2F&layout=button&size=small&width=67&height=20&appId" width="67" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-            </div>
-            <div id="footer_text" class="navbar-brand"><a href="https://www.wellbeing-warrior.com/welcome">+ Info</a></div>
-          </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand">
+          Ice Breakers
+          <img src="icon_ice_breaker.png" alt="" width="30" height="24" class="d-inline-block align-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <form class="d-flex">
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Share
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                  <li><a class="dropdown-item" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fprotected-springs-84908.herokuapp.com%2F">Linkedin</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="https://www.facebook.com/sharer/sharer.php?kid_directed_site=0&u=https%3A%2F%2Fprotected-springs-84908.herokuapp.com%2F&display=popup&ref=plugin&src=share_button">Facebook</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+          </div>
+          <div id="header_text" class="navbar-brand"><a href="https://www.wellbeing-warrior.com/welcome">+ Info</a></div>
+        </form>
       </div>
-    </div>
+    </nav>
   </header>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
   <%= yield %>
-
   <footer>
-    <div class="navbar-inner">
-      <div class="container">
-        <div id="footer_text" class="navbar-brand"><a href="https://www.wellbeing-warrior.com/trial_requests/new">Get your free trial</a></div>	
-        <ul class="nav navbar-nav navbar-right">
-          <div id="footer_text" class="navbar-brand"><%="@ 2021 Ice Breakers powered by "%><%=image_tag("logo_ww-lettering.svg", style: 'display:inline')%></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <div id="footer_text" class="navbar-brand"><a href="https://www.wellbeing-warrior.com/trial_requests/new">Get your free trial</a></div>
+        <div id="footer_text" class="navbar-brand"><%="@ 2021 Ice Breakers powered by "%><img src="logo_ww-lettering.svg" alt=""></div>
       </div>
-    </div>
+    </nav>
   </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
