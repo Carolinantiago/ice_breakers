@@ -25,7 +25,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-gem 'bootstrap-sass'
+gem 'sprockets-rails', '~> 3.2'
+gem 'bootstrap', '~> 5.0.0.beta1'
 gem 'devise'
 
 gem 'activeadmin'
