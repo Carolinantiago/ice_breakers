@@ -5,4 +5,7 @@ class AdminUser < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :tips
+
+  #validates :email, presence: true
+  #validates :tip, presence: true
 end
